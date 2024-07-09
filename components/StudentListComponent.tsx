@@ -63,7 +63,7 @@ const StudentListComponent = () => {
     const { data, count, error } = await query;
 
     if (error) {
-      console.error("Error fetching students:", error);
+      console.error("Error fetching students: ", error);
     } else {
       setStudents(data || []);
       setTotalPages(Math.ceil((count || 0) / perPage));
